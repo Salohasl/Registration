@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    filter: drop-shadow(0 0 10px white);
+  }
+  
+  @function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+  }
+  
+  .snow {
+    $total: 200;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  
+    @for $i from 1 through $total {
+      $random-x: random(1000000) * 0.0001vw;
+      $random-offset: random_range(-100000, 100000) * 0.0001vw;
+      $random-x-end: $random-x + $random-offset;
+      $random-x-end-yoyo: $random-x + ($random-offset / 2);
+      $random-yoyo-time: random_range(30000, 80000) / 100000;
+      $random-yoyo-y: $random-yoyo-time * 100vh;
+      $random-scale: random(10000) * 0.0001;
+      $fall-duration: random_range(10, 30) * 1s;
+      $fall-delay: random(30) * -1s;
+  
+      &:nth-child(#{$i}) {
+        opacity: random(10000) * 0.0001;
+        transform: translate($random-x, -10px) scale($random-scale);
+        animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+      }
+  
+      @keyframes fall-#{$i} {
+        #{percentage($random-yoyo-time)} {
+          transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+        }
+  
+        to {
+          transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+        }
+      }
+    }
+  }
+  
+.style-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    background: rgb(2,0,36);
+    background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 44%, rgba(0,212,255,1) 100%);
+    width: 30%;
+    height: 500px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 20px rgba(9,9,121,1);
+    h2{
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+        
+        margin-bottom: 10px;
+    }
+    .block-form{
+        
+        input{
+            background: rgb(253,29,29);
+            background: linear-gradient(38deg, rgba(253,29,29,1) 0%, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 99%);
+            padding: 10px;
+            border: none;
+            box-shadow: inset 1px 1px 10px black;
+            border-radius: 10px;
+            margin: 20px;
+            &::placeholder{
+                color: white;
+                text-align: center;
+                font-size: 13px;
+                font-weight: 100;
+            }
+        }
+    }
+    button{
+        margin-top: 50px;
+        background: rgb(253,29,29);
+        background: linear-gradient(38deg, rgba(253,29,29,1) 0%, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 99%);
+        border: none;
+        color: white;
+        padding: 10px;
+        width: 220px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 1px 1px 20px rgba(131,58,180,1);
+    
+        &:hover{
+            transition: 1s;
+            background: white;
+            color: blue;
+        }
+    }
+}
