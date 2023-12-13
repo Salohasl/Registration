@@ -5,90 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/winter.css"  id="theme-link">
+   
 </head>
+<header>
+    <div class="block-checkbox">	
+        <input type="checkbox" id="switch3" name="switch3" class="switch"  checked onclick="funcSummer()"/>
+        <label for="switch3">.</label>
+    </div>
+</header>
 <body>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
- 
+<!----Для анимации тепла-->
+    <div id="leaves">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i> 
+    </div>
+    <div class="sun"></div>
 
+<!-----Для анимации снега-->
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
  
-    <form class="style-form">
+    <button id="btn" class="style-button" onclick="upForm()">SIGN UP</button> 
+ 
+    <form id="form" class="style-form" style="display: none;">
         <h2>Sign up</h2>
         <div class="block-form">
             <input type="email" name="" id="mail" placeholder="email">
@@ -98,7 +126,8 @@
         </div>
         <button>Create account</button>
     </form>
-     
-<script src="/canvas/add.js"></script>
+
+<script src="/add.js"></script>
+
 </body>
 </html>
