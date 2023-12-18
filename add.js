@@ -13,8 +13,31 @@ function funcSummer(){
         theme.href = "style/summer.css";
         // В противном случае… 
     } else {
-        // …переключаемся на "light-theme.css"
         theme.href = "style/winter.css";
     }
 };
 
+//Валидация почты и имя
+const btnForm = document.querySelector('#btnForm');
+
+function valid(){
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    const input = document.querySelector('#mail');
+    if(input.value === EMAIL_REGEXP){
+        input.style.backgroundColor = 'green';
+    }else{
+        input.style.backgroundColor = 'red';
+        btnForm.removeEventListener('click', valid);
+    };
+        
+    const name = document.querySelector('#name');
+    if(name.value.length === 0){
+        document.querySelector('.validName').style.display = 'block';
+        name.style.backgroundColor = 'red';
+    }else{
+        name.style.backgroundColor = 'green';
+    }
+}
+btnForm.addEventListener('click', valid);
+
+//Подключение другой страницы через Ajax
