@@ -7,11 +7,9 @@ function upForm(){
 //Смена темы для Body (с зимы на лето)
 function funcSummer(){
     const theme = document.querySelector("#theme-link"); 
-    // Если текущий адрес содержит "style/winter.css"
-    if (theme.getAttribute("href") == "style/winter.css") {
-        // …то переключаемся на "style/summer.css"
+    
+    if (theme.getAttribute("href") == "style/winter.css") {       
         theme.href = "style/summer.css";
-        // В противном случае… 
     } else {
         theme.href = "style/winter.css";
     }
@@ -40,4 +38,4 @@ function valid(){
 }
 btnForm.addEventListener('click', valid);
 
-//Подключение другой страницы через Ajax
+//Выводы данных на другой странице через Локальное хранилище
