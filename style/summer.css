@@ -152,12 +152,6 @@ input.switch:checked ~ label:after {
   display: flex;
   flex-direction: column;
 }
-.style-form .text .validName {
-  display: none;
-  margin-top: -20px;
-  color: white;
-  font-weight: 700;
-}
 .style-form button {
   margin-top: 50px;
   background: linear-gradient(0deg, rgb(0, 164, 255) 0%, rgb(146, 208, 245) 100%);
